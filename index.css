@@ -22,10 +22,10 @@ body{
     font-size: 16px;
     background-color: var(--Magnolia);
 }
-main{
-    /* padding: 1em;
-    margin: 1em; */
-}
+/* main{
+    padding: 1em;
+    margin: 1em;
+} */
 
 /* ==== Sidebar ==== */
 .sidebar{
