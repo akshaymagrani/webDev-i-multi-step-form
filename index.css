@@ -27,6 +27,30 @@ body{
     margin: 1em;
 } */
 
+/* ==== Utilities ==== */
+.p-color{
+    color: var(--Cool-gray);
+}
+.card-bg{
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px lightgrey;
+}
+.card{
+    padding: 1em; 
+}
+.pd-3{
+    padding: 1em;
+}
+.pd-2{
+    padding: 0.5em;
+}
+.w-100{
+    width: 100%;
+}
+.w-auto{
+    width: auto;
+}
 /* ==== Sidebar ==== */
 .sidebar{
     display: flex;
@@ -34,7 +58,7 @@ body{
     background-image: url(./assets/images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     width: 100vw;
-    height: 200px;
+    height: 170px;
 }
 .sidebar a{
     padding: 1em;
@@ -47,6 +71,17 @@ body{
 }
 .sidebar .step, .sidebar .form-title{
     display: none;
+}
+
+/* ==== Personal Info ==== */
+legend {
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+/* ==== Plan ==== */
+.plan{
+    display: flex;
 }
 
 
