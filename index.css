@@ -14,6 +14,10 @@
 --Magnolia: hsl(217, 100%, 97%);
 --Alabaster: hsl(231, 100%, 99%);
 --White: hsl(0, 0%, 100%);
+
+    /* ### Image address */
+--mobile-Image-Add: url("./assets/images/bg-sidebar-mobile.svg");
+--desktop-Image-Add: url("./assets/images/bg-sidebar-desktop.svg");
 }
 body{
     padding: 0;
@@ -38,6 +42,7 @@ body{
 }
 .card{
     padding: 1em; 
+    max-width: calc(100vw - 6em);
 }
 .pd-3{
     padding: 1em;
@@ -55,7 +60,7 @@ body{
 .sidebar{
     display: flex;
     justify-content: center;
-    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-image: var(--mobile-Image-Add);
     background-repeat: no-repeat;
     width: 100vw;
     height: 170px;
