@@ -17,22 +17,22 @@
     <!-- Sidebar start -->
     <section class="sidebar">
       <div>
-        <a href="#">1</a>
+        <button><a href="#">1</a></button>
         <p class="step">Step 1</p>
         <h2 class="form-title">Your info</h2>
       </div>  
       <div>
-        <a href="#">2</a>
+        <button><a href="#">2</a></button>
         <p class="step">Step 2</p>
         <h2 class="form-title">Select plan</h2>
       </div>
       <div>
-        <a href="#">3</a>
+        <button><a href="#">3</a></button>
         <p class="step">Step 3</p>
         <h2 class="form-title">Add-ons</h2>
       </div>
       <div>
-        <a href="#">4</a>
+        <button><a href="#">4</a></button>
         <p class="step">Step 4</p>
         <h2 class="form-title">Summary</h2>
       </div>
@@ -90,14 +90,16 @@
         <p>$15/mo</p>
       </div>
     </label>
-    <div>
+    <div class="M-or-Y">
       <p>Monthly</p>
       <input type="checkbox" name="monthlyYearly" />
       <p>Yearly</p>
     </div>
 </div>
+<div class="btn-position">
     <input type="button" class="pd-2" name="Back-3" value="Go Back" />
     <input type="button" class="pd-2" name="Next-2" value="Next Step" />
+</div>
 </section>
     <!-- Step 2 end -->
 
@@ -107,33 +109,41 @@
     <h1>Pick add-ons</h1>
     <p>Add-ons help enhance your gaming experience.</p>
 
-    <label for="addOn-1">
-      <input type="checkbox" name="addOn" id="addOn-1"/>
-      <div>
-        <h2>Online service</h2>
-        <p>Access to multiplayer games</p>
+    <label for="addOn-1" class="addOn">
+      <div class="addOn">
+        <input type="checkbox" name="addOn" id="addOn-1"/>
+        <div>
+          <h2>Online service</h2>
+          <p>Access to multiplayer games</p>
+        </div>
       </div>
       <p class="addOn-rates">+$1/mo</p>
 </label>
-    <label for="addOn-2">
-      <input type="checkbox" name="addOn" id="addOn-2"/>
-      <div>
-        <h2>Larger storage</h2>
-        <p>Extra 1TB of cloud save</p>
+    <label for="addOn-2" class="addOn">
+      <div class="addOn">
+        <input type="checkbox" name="addOn" id="addOn-2"/>
+        <div>
+          <h2>Larger storage</h2>
+          <p>Extra 1TB of cloud save</p>
+        </div>
       </div>
       <p class="addOn-rates">+$2/mo</p>
 </label>
-    <label for="addOn-3">
-      <input type="checkbox" name="addOn" id="addOn-3"/>
-      <div>
-        <h2>Customizable Profile</h2>
-        <p>Custom theme on your profile</p>
+    <label for="addOn-3" class="addOn">
+      <div class="addOn">
+        <input type="checkbox" name="addOn" id="addOn-3"/>
+        <div>
+          <h2>Customizable Profile</h2>
+          <p>Custom theme on your profile</p>
+        </div>
       </div>
       <p class="addOn-rates">+$2/mo</p>
 </label>
 </div>
+<div class="btn-position">
     <input type="button" class="pd-2" name="Back-3" value="Go Back" />
     <input type="button" class="pd-2" name="Next-3" value="Next Step" />
+</div>
 </section>
     <!-- Step 3 end -->
 
@@ -147,8 +157,10 @@
 
     Total (per month/year)
 </div>
+<div class="btn-position">
     <input type="button" class="pd-2" name="Back-3" value="Go Back" />
     <input type="button" class="pd-2" name="Confirm" value="Confirm" />
+</div>
 </section>
     <!-- Step 4 end -->
 

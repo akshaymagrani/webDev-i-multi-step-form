@@ -30,6 +30,9 @@ body{
     padding: 1em;
     margin: 1em;
 } */
+section{
+    margin: auto;
+}
 
 /* ==== Utilities ==== */
 .p-color{
@@ -64,18 +67,74 @@ body{
     background-repeat: no-repeat;
     width: 100vw;
     height: 170px;
+    background-position: center;
+    background-size: cover;
 }
-.sidebar a{
+.sidebar button{
     padding: 1em;
-    margin: 1em;
+    margin: 2em 1em;
     border-radius: 50%;
     background-color: blue;
     color: white;
     border: solid 1px white;
+    height: 40px;
+    width: 40px;
+}
+.sidebar a{
+    color: white;
     text-decoration: none;
 }
+/* .sidebar button{
+    background-color: var(--Light-blue);
+    color: black;
+} */
 .sidebar .step, .sidebar .form-title{
     display: none;
+}
+input[value="Next Step"]{
+    margin: 1em;
+    background-color: var(--Marine-blue);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+input[value="Go Back"] {
+    margin: 1em;
+    color: var(--Cool-gray);
+    border: 0;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.btn-position{
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan{
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+input[type="radio"]{
+    display: none;
+}
+.plan, .plan img{
+    margin: 1em 0;
+}
+.plan div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+h2, .plan div p, .addOn p{
+    margin: 0 0 0 0.5em;
+}
+.M-or-Y{
+    display: flex;
+    justify-content: center;
+    background-color: var(--Light-gray);
+    color: var(--Cool-gray);
+    border-radius: 10px;
 }
 
 /* ==== Personal Info ==== */
@@ -87,6 +146,19 @@ legend {
 /* ==== Plan ==== */
 .plan{
     display: flex;
+}
+
+
+.addOn{
+    display: flex;
+    margin: 0.5em 0;
+}
+label.addOn{
+    justify-content: space-between;
+    align-items: center;
+}
+input[type="checkbox"]{
+    width: 20px;
 }
 
 
