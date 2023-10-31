@@ -71,7 +71,7 @@
       <img src="./assets/images/icon-arcade.svg" alt="arcade-icon" />
       <div>
         <h2>Arcade</h2>
-        <p>$9/mo</p>
+        <p class="p-color">$9/mo</p>
       </div>
     </label>
     <label class="plan" for="plan-2">
@@ -79,7 +79,7 @@
       <img src="./assets/images/icon-advanced.svg" alt="advance-icon"/>
       <div>
         <h2>Advanced</h2>
-        <p>$12/mo</p>
+        <p class="p-colors">$12/mo</p>
       </div>
     </label>
     <label class="plan" for="plan-3">
@@ -87,7 +87,7 @@
       <img src="./assets/images/icon-pro.svg" alt="pro-icon"/>
       <div>
         <h2>Pro</h2>
-        <p>$15/mo</p>
+        <p class="p-color">$15/mo</p>
       </div>
     </label>
     <div class="M-or-Y">
@@ -109,37 +109,43 @@
     <h1>Pick add-ons</h1>
     <p>Add-ons help enhance your gaming experience.</p>
 
-    <label for="addOn-1" class="addOn">
-      <div class="addOn">
-        <input type="checkbox" name="addOn" id="addOn-1"/>
+    <label class="container addOn">
+      <div>
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
         <div>
           <h2>Online service</h2>
-          <p>Access to multiplayer games</p>
+          <p class="p-color">Access to multiplayer games</p>
         </div>
       </div>
       <p class="addOn-rates">+$1/mo</p>
-</label>
-    <label for="addOn-2" class="addOn">
-      <div class="addOn">
-        <input type="checkbox" name="addOn" id="addOn-2"/>
+      </label>
+
+      <label class="container addOn">
         <div>
-          <h2>Larger storage</h2>
-          <p>Extra 1TB of cloud save</p>
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+          <div>
+            <h2>Larger storage</h2>
+            <p class="p-color">Extra 1TB of cloud save</p>
+          </div>
         </div>
-      </div>
-      <p class="addOn-rates">+$2/mo</p>
-</label>
-    <label for="addOn-3" class="addOn">
-      <div class="addOn">
-        <input type="checkbox" name="addOn" id="addOn-3"/>
+        <p class="addOn-rates">+$2/mo</p>
+      </label>
+
+      <label class="container addOn">
         <div>
-          <h2>Customizable Profile</h2>
-          <p>Custom theme on your profile</p>
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <div>
+            <h2>Customizable Profile</h2>
+            <p class="p-color">Custom theme on your profile</p>
+          </div>
         </div>
-      </div>
-      <p class="addOn-rates">+$2/mo</p>
-</label>
+        <p class="addOn-rates">+$2/mo</p>
+      </label>
 </div>
+
 <div class="btn-position">
     <input type="button" class="pd-2" name="Back-3" value="Go Back" />
     <input type="button" class="pd-2" name="Next-3" value="Next Step" />
@@ -151,11 +157,11 @@
 <section class="card">
   <div class="card-bg pd-3">
     <h1>Finishing up</h1>
-    <p>Double-check everything looks OK before confirming.</p>
+    <p class="p-color">Double-check everything looks OK before confirming.</p>
 
     <!-- Dynamically add subscription and add-on selections here -->
 
-    Total (per month/year)
+    <p class="p-color">Total (per month/year)</p>
 </div>
 <div class="btn-position">
     <input type="button" class="pd-2" name="Back-3" value="Go Back" />
@@ -165,11 +171,12 @@
     <!-- Step 4 end -->
 
     <!-- Step 5 start -->
-<section class="card">
+<section class="card t-auto">
   <div class="card-bg pd-3">
+    <img src="./assets/images/icon-thank-you.svg" alt="icon-thank-you" />
     <h1>Thank you!</h1>
 
-    <p>Thanks for confirming your subscription! We hope you have fun 
+    <p class="p-color">Thanks for confirming your subscription! We hope you have fun 
     using our platform. If you ever need support, please feel free 
     to email us at support@loremgaming.com. </p>
     </div>
