@@ -18,22 +18,22 @@
     <section>
       <div class="sidebar">
         <div>
-          <button aria-checked="true"><a href="#">1</a></button>
+          <button class="btn-nav"><a href="#">1</a></button>
           <p class="step">Step 1</p>
           <h2 class="form-title">Your info</h2>
         </div>  
         <div>
-          <button><a href="#">2</a></button>
+          <button class="btn-nav"><a href="#">2</a></button>
           <p class="step">Step 2</p>
           <h2 class="form-title">Select plan</h2>
         </div>
         <div>
-          <button><a href="#">3</a></button>
+          <button class="btn-nav"><a href="#">3</a></button>
           <p class="step">Step 3</p>
           <h2 class="form-title">Add-ons</h2>
         </div>
         <div>
-          <button><a href="#">4</a></button>
+          <button class="btn-nav"><a href="#">4</a></button>
           <p class="step">Step 4</p>
           <h2 class="form-title">Summary</h2>
         </div>
@@ -41,7 +41,7 @@
     <!-- Sidebar end -->
 
     <!-- Step 1 start -->
-  <section class="personalInfo  card1">
+  <section class="personalInfo card1">
     <div class="card card-bg pd-3">
       <h1>Personal info</h1>
       <p>Please provide your name, email address, and phone number.</p>
@@ -56,8 +56,9 @@
       <input type="number" class="pd-2 w-auto" id="phone-no" name="Phone-No" placeholder="e.g. +1 234 567 890"/>
       <br><br>
     </div>
-
-    <input type="button" class="pd-2" name="Next-1" value="Next Step"/>
+    <div class="btn-position">
+      <input type="button" class="pd-2" id="next1" name="Next-1" value="Next Step"/>
+    </div>
   </section>
     <!-- Step 1 end -->
 
@@ -98,8 +99,8 @@
     </div>
 </div>
 <div class="btn-position">
-    <input type="button" class="pd-2" name="Back-3" value="Go Back" />
-    <input type="button" class="pd-2" name="Next-2" value="Next Step" />
+    <input type="button" class="pd-2" name="Back-3" id="back2" value="Go Back" />
+    <input type="button" class="pd-2" name="Next-2" id="next2" value="Next Step" />
 </div>
 </section>
     <!-- Step 2 end -->
@@ -148,8 +149,8 @@
 </div>
 
 <div class="btn-position">
-    <input type="button" class="pd-2" name="Back-3" value="Go Back" />
-    <input type="button" class="pd-2" name="Next-3" value="Next Step" />
+    <input type="button" class="pd-2" name="Back-3" id="back3" value="Go Back" />
+    <input type="button" class="pd-2" name="Next-3" id="next3" value="Next Step" />
 </div>
 </section>
     <!-- Step 3 end -->
@@ -165,8 +166,8 @@
     <p class="p-color">Total (per month/year)</p>
 </div>
 <div class="btn-position">
-    <input type="button" class="pd-2" name="Back-3" value="Go Back" />
-    <input type="button" class="pd-2" name="Confirm" value="Confirm" />
+    <input type="button" class="pd-2" name="Back-3" id="back4" value="Go Back" />
+    <input type="button" class="pd-2" name="Confirm" id="next4" value="Confirm" />
 </div>
 </section>
     <!-- Step 4 end -->
@@ -191,4 +192,5 @@
     Coded by <a href="#">Akshaykumar I. Magrani</a>.
   </div>
 </body>
+<script src="./index.js"></script>
 </html>

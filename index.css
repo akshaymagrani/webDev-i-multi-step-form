@@ -277,12 +277,7 @@ input[type="checkbox"]{
 .card1, .card2, .card3, .card4, .card5 {
     background-color: var(--Magnolia);
     height: calc(100vh - 200px);
-}
-.card2,
-.card3,
-.card4,
-.card5{
-    display: none;
+    position: relative;
 }
 .card1 input:not(input[value="Next Step"]){
     width: calc(100% - 1em);
@@ -291,4 +286,13 @@ input[type="checkbox"]{
     position: absolute;
     bottom: 0;
     right: 0;
+}
+.d-none{
+    display: none;
+}
+
+.btn-position{
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
 }
