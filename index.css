@@ -100,8 +100,6 @@ section{
     padding: 1em;
     margin: 2em 1em;
     border-radius: 50%;
-    background-color: blue;
-    color: white;
     border: solid 1px white;
     height: 40px;
     width: 40px;
@@ -295,4 +293,14 @@ input[type="checkbox"]{
     position: absolute;
     bottom: 1em;
     width: 100%;
+}
+.btn-nav {
+    background-color: var(--Marine-blue);
+    color: white;
+    font-weight: bold;
+}
+.bg-blue{
+    background-color: var(--Light-blue);
+    color: black;
+    font-weight: bold;
 }

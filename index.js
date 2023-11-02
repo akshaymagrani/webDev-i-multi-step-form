@@ -26,6 +26,10 @@ function display_card1() {
     card4[0].classList.add("d-none");
     card5[0].classList.add("d-none");
     card1[0].classList.remove("d-none");
+    btnNav[0].classList.add("bg-blue");
+    btnNav[1].classList.remove("bg-blue");
+    btnNav[2].classList.remove("bg-blue");
+    btnNav[3].classList.remove("bg-blue");
 }
 display_card1();
 function display_card2() {
@@ -34,6 +38,10 @@ function display_card2() {
     card3[0].classList.add("d-none");
     card4[0].classList.add("d-none");
     card5[0].classList.add("d-none");
+    btnNav[0].classList.remove("bg-blue");
+    btnNav[1].classList.add("bg-blue");
+    btnNav[2].classList.remove("bg-blue");
+    btnNav[3].classList.remove("bg-blue");
 }
 function display_card3() {
     card1[0].classList.add("d-none");
@@ -41,6 +49,10 @@ function display_card3() {
     card3[0].classList.remove("d-none");
     card4[0].classList.add("d-none");
     card5[0].classList.add("d-none");
+    btnNav[0].classList.remove("bg-blue");
+    btnNav[1].classList.remove("bg-blue");
+    btnNav[2].classList.add("bg-blue");
+    btnNav[3].classList.remove("bg-blue");
 }
 function display_card4() {
     card1[0].classList.add("d-none");
@@ -48,6 +60,10 @@ function display_card4() {
     card3[0].classList.add("d-none");
     card4[0].classList.remove("d-none");
     card5[0].classList.add("d-none");
+    btnNav[0].classList.remove("bg-blue");
+    btnNav[1].classList.remove("bg-blue");
+    btnNav[2].classList.remove("bg-blue");
+    btnNav[3].classList.add("bg-blue");
 }
 function display_card5() {
     card1[0].classList.add("d-none");
