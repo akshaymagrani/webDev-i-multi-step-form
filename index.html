@@ -75,34 +75,39 @@
   <div class="card-bg  pd-3 card">
     <h1>Select your plan</h1>
     <p class="p-color">You have the option of monthly or yearly billing.</p>
-
-    <label class="plan" for="plan-1">
-      <input type="radio" name="Plan" id="plan-1">
-      <img src="./assets/images/icon-arcade.svg" alt="arcade-icon" />
-      <div>
-        <h2>Arcade</h2>
-        <p class="p-color">$9/mo</p>
-      </div>
-    </label>
-    <label class="plan" for="plan-2">
-      <input type="radio" name="Plan" id="plan-2">
-      <img src="./assets/images/icon-advanced.svg" alt="advance-icon"/>
-      <div>
-        <h2>Advanced</h2>
-        <p class="p-colors">$12/mo</p>
-      </div>
-    </label>
-    <label class="plan" for="plan-3">
-      <input type="radio" name="Plan" id="plan-3">
-      <img src="./assets/images/icon-pro.svg" alt="pro-icon"/>
-      <div>
-        <h2>Pro</h2>
-        <p class="p-color">$15/mo</p>
-      </div>
-    </label>
+    <div class="gr-plan">
+      <label class="plan" for="plan-1">
+        <input type="radio" name="Plan" id="plan-1">
+        <img src="./assets/images/icon-arcade.svg" alt="arcade-icon" />
+        <div>
+          <h2>Arcade</h2>
+          <p class="p-color">$<span class="monthlyCost">9</span>/mo</p>
+        </div>
+      </label>
+      <label class="plan" for="plan-2">
+        <input type="radio" name="Plan" id="plan-2">
+        <img src="./assets/images/icon-advanced.svg" alt="advance-icon"/>
+        <div>
+          <h2>Advanced</h2>
+          <p class="p-color">$<span class="monthlyCost">12</span>/mo</p>
+        </div>
+      </label>
+      <label class="plan" for="plan-3">
+        <input type="radio" name="Plan" id="plan-3">
+        <img src="./assets/images/icon-pro.svg" alt="pro-icon"/>
+        <div>
+          <h2>Pro</h2>
+          <p class="p-color">$<span class="monthlyCost">15</span>/mo</p>
+        </div>
+      </label>
+    </div>
     <div class="M-or-Y">
       <p>Monthly</p>
-      <input type="checkbox" name="monthlyYearly" />
+      <!-- Rounded switch -->
+      <label class="switch">
+        <input type="checkbox" name="monthlyYearly">
+        <span class="slider round"></span>
+      </label>
       <p>Yearly</p>
     </div>
 </div>
