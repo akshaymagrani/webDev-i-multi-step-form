@@ -82,3 +82,48 @@ back2.addEventListener('click', display_card1);
 back3.addEventListener('click', display_card2);
 back4.addEventListener('click', display_card3);
 
+function getSelectedRadio() {
+    let radioButtons = document.getElementsByName("Plan");
+    for (let radio of radioButtons) {
+        if (radio.checked) {
+            // radio.parentElement.style.border = "2px solid blue";
+            console.log(radio.parentNode);
+        }
+    }
+}
+
+
+// let yearlycost = document.getElementsByClassName("yearlycost");
+
+function yearlyCost() {
+    // let checkbox = document.getElementById("checkbox");
+    var checkbox = document.querySelector('input[type="checkbox"]');
+    console.log(checkbox);
+    let monthlycost = document.getElementsByClassName("monthlyCost");
+    console.log(monthlycost[0].innerHTML);
+    let offer = document.getElementsByClassName("gr-offer");
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            monthlycost[0].innerHTML = "$90/yr";
+            monthlycost[1].innerHTML = "$120/yr";
+            monthlycost[2].innerHTML = "$150/yr";
+            offer[0].computedStyleMap.display = "block";
+            offer[1].computedStyleMap.display = "block";
+            offer[2].computedStyleMap.display = "block";
+            console.log("checked");
+            console.log(monthlycost[0].innerHTML);
+        } else {
+            monthlycost[0].innerHTML = "$9/mo";
+            monthlycost[1].innerHTML = "$12/mo";
+            monthlycost[2].innerHTML = "$15/mo";
+            offer[0].computedStyleMap.display = "none";
+            offer[1].computedStyleMap.display = "none";
+            offer[2].computedStyleMap.display = "none";
+            console.log(monthlycost[0].innerHTML);
+        }  
+    });
+}
+document.addEventListener('DOMContentLoaded', function () {
+    yearlyCost();
+});
+

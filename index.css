@@ -146,7 +146,8 @@ input[value="Confirm"]{
     border: 2px solid transparent;
 }
 input[type="radio"]{
-    display: none;
+    width: 2px;
+    height: 2px;
 }
 .plan, .plan img{
     margin: 1em 0;
@@ -159,6 +160,9 @@ input[type="radio"]{
 }
 h2, .plan div p, .addOn p{
     margin: 0 0 0 0.5em;
+}
+.gr-offer{
+    display: none;
 }
 .M-or-Y{
     display: flex;
@@ -429,6 +433,11 @@ input:checked+.slider:before {
         justify-content: space-between;
         align-items: start;
     }
+    .gr-offer{
+        display: block;
+        color: var(--Marine-blue);
+        font-size: small;
+    }
     .plan{
         flex-direction: column;
         border-radius: 5px;
@@ -442,7 +451,7 @@ input:checked+.slider:before {
         width: 40px;
         height: 40px;
     }
-    .plan h2, .plan p{
+    .plan h2, .plan div p{
         margin: 0;
     }
 }
