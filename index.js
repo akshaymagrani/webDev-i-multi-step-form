@@ -97,33 +97,59 @@ function getSelectedRadio() {
 
 function yearlyCost() {
     // let checkbox = document.getElementById("checkbox");
-    var checkbox = document.querySelector('input[type="checkbox"]');
+    var checkbox = document.querySelector('input[class="M-or-Y1"]');
     console.log(checkbox);
     let monthlycost = document.getElementsByClassName("monthlyCost");
     console.log(monthlycost[0].innerHTML);
     let offer = document.getElementsByClassName("gr-offer");
+    let addOn = document.getElementsByClassName("addOn");
+    console.log(addOn[0].innerHTML);
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             monthlycost[0].innerHTML = "$90/yr";
             monthlycost[1].innerHTML = "$120/yr";
             monthlycost[2].innerHTML = "$150/yr";
-            offer[0].computedStyleMap.display = "block";
-            offer[1].computedStyleMap.display = "block";
-            offer[2].computedStyleMap.display = "block";
+            offer[0].style.display = "block";
+            offer[1].style.display = "block";
+            offer[2].style.display = "block";
+            addOn[0].style.border = "2px solid blue";
             console.log("checked");
             console.log(monthlycost[0].innerHTML);
         } else {
             monthlycost[0].innerHTML = "$9/mo";
             monthlycost[1].innerHTML = "$12/mo";
             monthlycost[2].innerHTML = "$15/mo";
-            offer[0].computedStyleMap.display = "none";
-            offer[1].computedStyleMap.display = "none";
-            offer[2].computedStyleMap.display = "none";
+            offer[0].style.display = "none";
+            offer[1].style.display = "none";
+            offer[2].style.display = "none";
+            addOn[0].style.border = "2px solid grey";
             console.log(monthlycost[0].innerHTML);
         }  
     });
 }
+//     let radioButtons = document.getElementsByName("Plan");
+//     radioButtons[0].addEventListener('change', function () {
+//         if (radioButtons[0].checked == true) {
+//             radioButtons[0].parentNode.classList.add("radio-border");
+//             console.log(radioButtons[0].parentNode.classList);
+//         } else {
+//             radioButtons[0].parentElement.classList.replace("radio-no-border");
+//             console.log(radioButtons[0].parentNode.classList);
+//         }
+//     });
+// }
+    // function updateStyles() {
+    //     const radios = document.getElementsByClassName('plan');
+    //     radios.forEach(radio => {
+    //         if (radio.checked) {
+    //             radio.parentElement.style.borderColor = 'blue';
+    //             console.log("Running");
+    //         } else {
+    //             radio.parentElement.style.borderColor = 'lightgrey';
+    //         }
+    //     });
+    // }
+
 document.addEventListener('DOMContentLoaded', function () {
     yearlyCost();
 });
-

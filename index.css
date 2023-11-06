@@ -161,8 +161,8 @@ input[type="radio"]{
 h2, .plan div p, .addOn p{
     margin: 0 0 0 0.5em;
 }
-.gr-offer{
-    display: none;
+.radio-no-border {
+    border: 2px solid transparent;
 }
 .M-or-Y{
     display: flex;
@@ -454,4 +454,10 @@ input:checked+.slider:before {
     .plan h2, .plan div p{
         margin: 0;
     }
+}
+.radio-border {
+    border: 2px solid blue;
+}
+.radio-no-border {
+    border: 2px solid var(--Light-gray);
 }
