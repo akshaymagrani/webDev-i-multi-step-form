@@ -46,6 +46,10 @@ h2{
     font-family: Ubuntu-M;
     font-size: 1.5em;
 }
+h3{
+    font-family: Ubuntu-R;
+    font-size: 1.25em;
+}
 p{
     font-family: Ubuntu-R;
     font-size: 1.25em;
@@ -84,6 +88,12 @@ section{
 }
 .t-auto{
     text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.justify-spacebetween{
+    justify-content: space-between;
 }
 /* ==== Sidebar ==== */
 .sidebar{
@@ -200,7 +210,23 @@ label.addOn{
 input[type="checkbox"]{
     width: 20px;
 }
-
+#totalCost{
+    background-color: var(--Light-gray);
+    border-radius: 10px;
+    padding: 1em;
+}
+#totalCost p{
+    margin: 0;
+}
+#totalCost h3{
+    margin: 0.5em 0;
+}
+#totalCost > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0
+}
 
 /* ==== Footer ==== */
 .attribution {
@@ -384,7 +410,7 @@ input:checked+.slider:before {
     }
     .gr{
         display: grid;
-        grid-template-rows: 1fr 10px;
+        grid-template-rows: 1fr;
         grid-template-columns: 0.75fr 2fr;
         width: 75vw;
         justify-content: center;
@@ -392,7 +418,7 @@ input:checked+.slider:before {
         align-items: center;
         background-color: white;
         padding: 1em;
-        border-radius: 5px;
+        border-radius: 10px;
     }
     .sidebar{
         width: 100%;
@@ -400,6 +426,7 @@ input:checked+.slider:before {
         flex-direction: column;
         background-image: var(--desktop-Image-Add);
         justify-content: flex-start;
+        border-radius: 10px;
     }
     .card1,
     .card2,

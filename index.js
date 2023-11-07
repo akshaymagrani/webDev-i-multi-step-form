@@ -102,8 +102,8 @@ function yearlyCost() {
     let monthlycost = document.getElementsByClassName("monthlyCost");
     console.log(monthlycost[0].innerHTML);
     let offer = document.getElementsByClassName("gr-offer");
-    let addOn = document.getElementsByClassName("addOn");
-    console.log(addOn[0].innerHTML);
+    let addOnRates = document.getElementsByClassName("addOn-rates");
+    let finishRates = document.getElementsByClassName("finish-rate");
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             monthlycost[0].innerHTML = "$90/yr";
@@ -112,7 +112,12 @@ function yearlyCost() {
             offer[0].style.display = "block";
             offer[1].style.display = "block";
             offer[2].style.display = "block";
-            addOn[0].style.border = "2px solid blue";
+            addOnRates[0].innerHTML = "+$10/yr";
+            addOnRates[1].innerHTML = "+$20/yr";
+            addOnRates[2].innerHTML = "+$20/yr";
+            finishRates[0].innerHTML = "90";
+            finishRates[1].innerHTML = "10";
+            finishRates[2].innerHTML = "20";
             console.log("checked");
             console.log(monthlycost[0].innerHTML);
         } else {
@@ -122,6 +127,12 @@ function yearlyCost() {
             offer[0].style.display = "none";
             offer[1].style.display = "none";
             offer[2].style.display = "none";
+            addOnRates[0].innerHTML = "+$1/mo";
+            addOnRates[1].innerHTML = "+$2/mo";
+            addOnRates[2].innerHTML = "+$2/mo";
+            finishRates[0].innerHTML = "9";
+            finishRates[1].innerHTML = "1";
+            finishRates[2].innerHTML = "2";
             addOn[0].style.border = "2px solid grey";
             console.log(monthlycost[0].innerHTML);
         }  
