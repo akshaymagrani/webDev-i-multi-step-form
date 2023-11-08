@@ -35,15 +35,15 @@ function yearlyCost() {
     console.log(mY);
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
-            monthlycost[0].innerHTML = "$90";
-            monthlycost[1].innerHTML = "$120";
-            monthlycost[2].innerHTML = "$150";
+            monthlycost[0].innerHTML = "90";
+            monthlycost[1].innerHTML = "120";
+            monthlycost[2].innerHTML = "150";
             offer[0].style.display = "block";
             offer[1].style.display = "block";
             offer[2].style.display = "block";
-            addOnRates[0].innerHTML = "+$10";
-            addOnRates[1].innerHTML = "+$20";
-            addOnRates[2].innerHTML = "+$20";
+            addOnRates[0].innerHTML = "10";
+            addOnRates[1].innerHTML = "20";
+            addOnRates[2].innerHTML = "20";
             finishRates[0].innerHTML = "90";
             finishRates[1].innerHTML = "10";
             finishRates[2].innerHTML = "20";
@@ -54,15 +54,15 @@ function yearlyCost() {
                 console.log(`${i}`,y, mY.length);
             }
         } else {
-            monthlycost[0].innerHTML = "$9";
-            monthlycost[1].innerHTML = "$12";
-            monthlycost[2].innerHTML = "$15";
+            monthlycost[0].innerHTML = "9";
+            monthlycost[1].innerHTML = "12";
+            monthlycost[2].innerHTML = "15";
             offer[0].style.display = "none";
             offer[1].style.display = "none";
             offer[2].style.display = "none";
-            addOnRates[0].innerHTML = "+$1";
-            addOnRates[1].innerHTML = "+$2";
-            addOnRates[2].innerHTML = "+$2";
+            addOnRates[0].innerHTML = "1";
+            addOnRates[1].innerHTML = "2";
+            addOnRates[2].innerHTML = "2";
             finishRates[0].innerHTML = "9";
             finishRates[1].innerHTML = "1";
             finishRates[2].innerHTML = "2";
