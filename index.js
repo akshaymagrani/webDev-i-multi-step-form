@@ -15,12 +15,11 @@ let back4 = document.getElementById("back4");
 
 let btnNav = document.getElementsByClassName("btn-nav");
 
-let M = "monthly";
-let Y = "yearly";
-let m = "mo";
-let y = "yr";
+const M = "Monthly";
+const Y = "Yearly";
+const m = "mo";
+const y = "yr";
 let mY = document.getElementsByClassName("m-y");
-
 
 function yearlyCost() {
     // let checkbox = document.getElementById("checkbox");
@@ -31,7 +30,7 @@ function yearlyCost() {
     let offer = document.getElementsByClassName("gr-offer");
     let addOnRates = document.getElementsByClassName("addOn-rates");
     let finishRates = document.getElementsByClassName("finish-rate");
-    
+    let MY = document.getElementById("Mo-Ye");
     console.log(mY);
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
@@ -51,6 +50,7 @@ function yearlyCost() {
             console.log(monthlycost[0].innerHTML);
             for(let i = 0; i < mY.length; i++){
                 mY[i].innerHTML = y;
+                MY.innerHTML = Y;
                 console.log(`${i}`,y, mY.length);
             }
         } else {
@@ -69,6 +69,7 @@ function yearlyCost() {
             console.log(monthlycost[0].innerHTML);
             for(let i = 0; i < mY.length; i++){
                 mY[i].innerHTML = m;
+                MY.innerHTML = M;
             }
         }  
     });
