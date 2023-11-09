@@ -1,19 +1,95 @@
-let card1 = document.getElementsByClassName("card1");
-let card2 = document.getElementsByClassName("card2");
-let card3 = document.getElementsByClassName("card3");
-let card4 = document.getElementsByClassName("card4");
-let card5 = document.getElementsByClassName("card5");
+function getElementsByClass(classname) {
+    return document.getElementsByClassName(classname);
+}
 
-let next1 = document.getElementById("next1");
-let next2 = document.getElementById("next2");
-let next3 = document.getElementById("next3");
-let next4 = document.getElementById("next4");
+function getElementsById(id) {
+    return document.getElementById(id);
+}
 
-let back2 = document.getElementById("back2");
-let back3 = document.getElementById("back3");
-let back4 = document.getElementById("back4");
+function hideAllCards() {
+    const cards = getElementsByClass("card");
+    
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.add("d-none");
+    }
+}
 
-let btnNav = document.getElementsByClassName("btn-nav");
+function displayCard(cardIndex) {
+    hideAllCards();
+    const cards = getElementsByClass(`card${cardIndex}`);
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("d-none");
+    }
+}
+
+function toggleNavStyle(activeIndex) {
+    const btnNav = getElementsByClass("btn-nav");
+
+    for (let i = 0; i < btnNav.length; i++) {
+        btnNav[i].classList.toggle("bg-blue", i === activeIndex);
+    }
+}
+
+function displayCard1() {
+    hideAllCards();
+    displayCard(1);
+    toggleNavStyle(0);
+}
+
+function displayCard2() {
+    hideAllCards();
+    displayCard(2);
+    toggleNavStyle(1);
+    yearlyCost();
+}
+
+function displayCard3() {
+    hideAllCards();
+    displayCard(3);
+    toggleNavStyle(2);
+    yearlyCost();
+}
+
+function displayCard4() {
+    hideAllCards();
+    displayCard(4);
+    toggleNavStyle(3);
+    yearlyCost();
+}
+
+function displayCard5() {
+    hideAllCards();
+    displayCard(5);
+    yearlyCost();
+}
+
+// Event listeners for navigation buttons...
+btnNav[0].addEventListener('click', displayCard1);
+btnNav[1].addEventListener('click', displayCard2);
+btnNav[2].addEventListener('click', displayCard3);
+btnNav[3].addEventListener('click', displayCard4);
+
+// Initial display
+displayCard1();
+
+
+// let card1 = document.getElementsByClassName("card1");
+// let card2 = document.getElementsByClassName("card2");
+// let card3 = document.getElementsByClassName("card3");
+// let card4 = document.getElementsByClassName("card4");
+// let card5 = document.getElementsByClassName("card5");
+
+// let next1 = document.getElementById("next1");
+// let next2 = document.getElementById("next2");
+// let next3 = document.getElementById("next3");
+// let next4 = document.getElementById("next4");
+
+// let back2 = document.getElementById("back2");
+// let back3 = document.getElementById("back3");
+// let back4 = document.getElementById("back4");
+
+// let btnNav = document.getElementsByClassName("btn-nav");
 
 const M = "Monthly";
 const Y = "Yearly";
@@ -101,76 +177,76 @@ document.addEventListener('DOMContentLoaded', function () {
     yearlyCost();
 });
 
-btnNav[0].addEventListener('click', display_card1);
-btnNav[1].addEventListener('click', display_card2);
-btnNav[2].addEventListener('click', display_card3);
-btnNav[3].addEventListener('click', display_card4);
+// btnNav[0].addEventListener('click', display_card1);
+// btnNav[1].addEventListener('click', display_card2);
+// btnNav[2].addEventListener('click', display_card3);
+// btnNav[3].addEventListener('click', display_card4);
 
-function display_card1() {
-    card2[0].classList.add("d-none");
-    card3[0].classList.add("d-none");
-    card4[0].classList.add("d-none");
-    card5[0].classList.add("d-none");
-    card1[0].classList.remove("d-none");
-    btnNav[0].classList.add("bg-blue");
-    btnNav[1].classList.remove("bg-blue");
-    btnNav[2].classList.remove("bg-blue");
-    btnNav[3].classList.remove("bg-blue");
-}
-display_card1();
-function display_card2() {
-    card1[0].classList.add("d-none");
-    card2[0].classList.remove("d-none");
-    card3[0].classList.add("d-none");
-    card4[0].classList.add("d-none");
-    card5[0].classList.add("d-none");
-    btnNav[0].classList.remove("bg-blue");
-    btnNav[1].classList.add("bg-blue");
-    btnNav[2].classList.remove("bg-blue");
-    btnNav[3].classList.remove("bg-blue");
-    yearlyCost()
-}
-function display_card3() {
-    card1[0].classList.add("d-none");
-    card2[0].classList.add("d-none");
-    card3[0].classList.remove("d-none");
-    card4[0].classList.add("d-none");
-    card5[0].classList.add("d-none");
-    btnNav[0].classList.remove("bg-blue");
-    btnNav[1].classList.remove("bg-blue");
-    btnNav[2].classList.add("bg-blue");
-    btnNav[3].classList.remove("bg-blue");
-    yearlyCost()
-}
-function display_card4() {
-    card1[0].classList.add("d-none");
-    card2[0].classList.add("d-none");
-    card3[0].classList.add("d-none");
-    card4[0].classList.remove("d-none");
-    card5[0].classList.add("d-none");
-    btnNav[0].classList.remove("bg-blue");
-    btnNav[1].classList.remove("bg-blue");
-    btnNav[2].classList.remove("bg-blue");
-    btnNav[3].classList.add("bg-blue");
-    yearlyCost()
-}
-function display_card5() {
-    card1[0].classList.add("d-none");
-    card3[0].classList.add("d-none");
-    card2[0].classList.add("d-none");
-    card4[0].classList.add("d-none");
-    card5[0].classList.remove("d-none");
-    yearlyCost()
-}
+// function display_card1() {
+//     card2[0].classList.add("d-none");
+//     card3[0].classList.add("d-none");
+//     card4[0].classList.add("d-none");
+//     card5[0].classList.add("d-none");
+//     card1[0].classList.remove("d-none");
+//     btnNav[0].classList.add("bg-blue");
+//     btnNav[1].classList.remove("bg-blue");
+//     btnNav[2].classList.remove("bg-blue");
+//     btnNav[3].classList.remove("bg-blue");
+// }
+// display_card1();
+// function display_card2() {
+//     card1[0].classList.add("d-none");
+//     card2[0].classList.remove("d-none");
+//     card3[0].classList.add("d-none");
+//     card4[0].classList.add("d-none");
+//     card5[0].classList.add("d-none");
+//     btnNav[0].classList.remove("bg-blue");
+//     btnNav[1].classList.add("bg-blue");
+//     btnNav[2].classList.remove("bg-blue");
+//     btnNav[3].classList.remove("bg-blue");
+//     yearlyCost()
+// }
+// function display_card3() {
+//     card1[0].classList.add("d-none");
+//     card2[0].classList.add("d-none");
+//     card3[0].classList.remove("d-none");
+//     card4[0].classList.add("d-none");
+//     card5[0].classList.add("d-none");
+//     btnNav[0].classList.remove("bg-blue");
+//     btnNav[1].classList.remove("bg-blue");
+//     btnNav[2].classList.add("bg-blue");
+//     btnNav[3].classList.remove("bg-blue");
+//     yearlyCost()
+// }
+// function display_card4() {
+//     card1[0].classList.add("d-none");
+//     card2[0].classList.add("d-none");
+//     card3[0].classList.add("d-none");
+//     card4[0].classList.remove("d-none");
+//     card5[0].classList.add("d-none");
+//     btnNav[0].classList.remove("bg-blue");
+//     btnNav[1].classList.remove("bg-blue");
+//     btnNav[2].classList.remove("bg-blue");
+//     btnNav[3].classList.add("bg-blue");
+//     yearlyCost()
+// }
+// function display_card5() {
+//     card1[0].classList.add("d-none");
+//     card3[0].classList.add("d-none");
+//     card2[0].classList.add("d-none");
+//     card4[0].classList.add("d-none");
+//     card5[0].classList.remove("d-none");
+//     yearlyCost()
+// }
 
-next1.addEventListener('click', display_card2);
-next2.addEventListener('click', display_card3);
-next3.addEventListener('click', display_card4);
-next4.addEventListener('click', display_card5);
+// next1.addEventListener('click', display_card2);
+// next2.addEventListener('click', display_card3);
+// next3.addEventListener('click', display_card4);
+// next4.addEventListener('click', display_card5);
 
-back2.addEventListener('click', display_card1);
-back3.addEventListener('click', display_card2);
-back4.addEventListener('click', display_card3);
+// back2.addEventListener('click', display_card1);
+// back3.addEventListener('click', display_card2);
+// back4.addEventListener('click', display_card3);
 
 function getSelectedRadio() {
     let radioButtons = document.getElementsByName("Plan");
