@@ -1,3 +1,5 @@
+const btnNav = document.getElementsByClassName("btn-nav");
+
 function getElementsByClass(classname) {
     return document.getElementsByClassName(classname);
 }
@@ -11,58 +13,65 @@ function hideAllCards() {
     
     for (let i = 0; i < cards.length; i++) {
         cards[i].classList.add("d-none");
+        console.log("hideAllCards", cards[i].classList);
     }
 }
 
 function displayCard(cardIndex) {
     hideAllCards();
-    const cards = getElementsByClass(`card${cardIndex}`);
-
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].classList.remove("d-none");
-    }
+    // const cards = getElementsByClass(`card${cardIndex}`);
+    const cards = getElementsByClass("card");
+    cards[cardIndex].classList.remove("d-none");
+    // for (let i = 0; i < cards.length; i++) {
+    //     cards[i].classList.remove("d-none");
+    //     console.log("displayCard()",cards[i].classList);
+    // }
+    // console.log("displayCard() running");
 }
 
 function toggleNavStyle(activeIndex) {
-    const btnNav = getElementsByClass("btn-nav");
 
     for (let i = 0; i < btnNav.length; i++) {
         btnNav[i].classList.toggle("bg-blue", i === activeIndex);
     }
+    
 }
 
 function displayCard1() {
     hideAllCards();
-    displayCard(1);
+    displayCard(0);
     toggleNavStyle(0);
 }
 
 function displayCard2() {
     hideAllCards();
-    displayCard(2);
+    displayCard(1);
     toggleNavStyle(1);
     yearlyCost();
 }
 
 function displayCard3() {
     hideAllCards();
-    displayCard(3);
+    displayCard(2);
     toggleNavStyle(2);
     yearlyCost();
 }
 
 function displayCard4() {
     hideAllCards();
-    displayCard(4);
+    displayCard(3);
     toggleNavStyle(3);
     yearlyCost();
 }
 
 function displayCard5() {
     hideAllCards();
-    displayCard(5);
+    displayCard(4);
     yearlyCost();
 }
+
+// Initial display
+displayCard1();
 
 // Event listeners for navigation buttons...
 btnNav[0].addEventListener('click', displayCard1);
@@ -70,8 +79,7 @@ btnNav[1].addEventListener('click', displayCard2);
 btnNav[2].addEventListener('click', displayCard3);
 btnNav[3].addEventListener('click', displayCard4);
 
-// Initial display
-displayCard1();
+
 
 
 // let card1 = document.getElementsByClassName("card1");
