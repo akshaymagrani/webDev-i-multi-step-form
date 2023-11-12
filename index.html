@@ -20,29 +20,29 @@
         <div>
           <button class="btn-nav" type="button">1</button>
           <div class="gr-navDiv">
-              <p class="step">Step 1</p>
-              <h2 class="form-title">Your info</h2>
-            </div>
+            <p class="step">Step 1</p>
+            <h3 class="form-title">Your info</h3>
+          </div>
         </div>  
         <div>
           <button class="btn-nav">2</button>
           <div class="gr-navDiv">
-          <p class="step">Step 2</p>
-          <h2 class="form-title">Select plan</h2>
+            <p class="step">Step 2</p>
+            <h3 class="form-title">Select plan</h3>
           </div>
         </div>
         <div>
           <button class="btn-nav">3</button>
           <div class="gr-navDiv">
-          <p class="step">Step 3</p>
-          <h2 class="form-title">Add-ons</h2>
+            <p class="step">Step 3</p>
+            <h3 class="form-title">Add-ons</h3>
           </div>
         </div>
         <div>
           <button class="btn-nav">4</button>
           <div class="gr-navDiv">
-          <p class="step">Step 4</p>
-          <h2 class="form-title">Summary</h2>
+            <p class="step">Step 4</p>
+            <h3 class="form-title">Summary</h3>
           </div>
         </div>
       </div>
@@ -55,13 +55,13 @@
       <p>Please provide your name, email address, and phone number.</p>
 
       <legend for="name">Name</legend>
-      <input type="text" class="pd-2 w-auto" id="name" name="Name" placeholder="e.g. Stephen King"/>
+      <input type="text" class="pd-2 w-auto" id="name" name="Name" placeholder="e.g. Stephen King" autocomplete="given-name"/>
       <br><br>
       <legend for="email">Email Address</legend>
-      <input type="email" class="pd-2 w-auto" id="email" name="Email" placeholder="e.g. stephenking@lorem.com"/>
+      <input type="email" class="pd-2 w-auto" id="email" name="Email" placeholder="e.g. stephenking@lorem.com" autocomplete="email"/>
       <br><br>
       <legend for="phone-no">Phone Number</legend>
-      <input type="number" class="pd-2 w-auto" id="phone-no" name="Phone-No" placeholder="e.g. +1 234 567 890"/>
+      <input type="number" class="pd-2 w-auto" id="phone-no" name="Phone-No" placeholder="e.g. +1 234 567 890" required/>
       <br><br>
     </div>
     <div class="btn-position">
@@ -107,7 +107,7 @@
     <div class="M-or-Y">
       <p>Monthly</p>
       <!-- Rounded switch -->
-      <label class="switch">
+      <label class="switch" for="checkbox">
         <input type="checkbox" id="checkbox" name="monthlyYearly" class="M-or-Y1">
         <span class="slider round"></span>
       </label>
@@ -129,7 +129,7 @@
 
     <label class="container addOn">
       <div>
-        <input type="checkbox">
+        <input type="checkbox" name="multiplayer-checbox">
         <span class="checkmark"></span>
         <div>
           <h2>Online service</h2>
@@ -141,7 +141,7 @@
 
       <label class="container addOn">
         <div>
-          <input type="checkbox">
+          <input type="checkbox" name="extra-space-checkbox">
           <span class="checkmark"></span>
           <div>
             <h2>Larger storage</h2>
@@ -153,7 +153,7 @@
 
       <label class="container addOn">
         <div>
-          <input type="checkbox">
+          <input type="checkbox" name="theme-checkbox">
           <span class="checkmark"></span>
           <div>
             <h2>Customizable Profile</h2>

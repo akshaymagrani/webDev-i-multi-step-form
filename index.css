@@ -18,7 +18,7 @@
     /* ### Image address */
 --mobile-Image-Add: url("./assets/images/bg-sidebar-mobile.svg");
 --desktop-Image-Add: url("./assets/images/bg-sidebar-desktop.svg");
-font-size: 10px;
+
 }
 @font-face {
     font-family: Ubuntu-B;
@@ -36,24 +36,24 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 1.6em;
+    font-size: 10px;
     background-color: var(--Magnolia);
 }
 h1{
     font-family: Ubuntu-B;
-    font-size: 1.75em;
+    font-size: 2.6em;
 }
 h2{
     font-family: Ubuntu-M;
-    font-size: 1.5em;
+    font-size: 2.2em;
 }
 h3{
     font-family: Ubuntu-R;
-    font-size: 1.25em;
+    font-size: 1.8em;
 }
 p{
     font-family: Ubuntu-R;
-    font-size: 1.25em;
+    font-size: 1.6em;
 }
 section{
     margin: auto;
@@ -69,14 +69,14 @@ section{
     box-shadow: 0 10px 15px lightgrey;
 }
 .card{
-    padding: 1em; 
+    padding: 1.6em; 
     max-width: calc(100vw - 6em);
     position: relative;
     top: -4em;
     margin: 0 auto;
 }
 .pd-3{
-    padding: 1em;
+    padding: 1.6em;
 }
 .pd-2{
     padding: 0.5em;
@@ -108,8 +108,7 @@ section{
     background-size: cover;
 }
 .sidebar button{
-    padding: 1em;
-    margin: 2em 1em;
+    margin: 2em 1.6em;
     border-radius: 50%;
     border: solid 1px white;
     height: 40px;
@@ -127,21 +126,21 @@ section{
     display: none;
 }
 input[value="Next Step"]{
-    margin: 1em;
+    margin: 1.6em;
     background-color: var(--Marine-blue);
     color: white;
     border: 0;
     border-radius: 5px;
 }
 input[value="Go Back"] {
-    margin: 1em;
+    margin: 1.6em;
     color: var(--Cool-gray);
     border: 0;
     border-radius: 5px;
     background-color: transparent;
 }
 input[value="Confirm"]{
-    margin: 1em;
+    margin: 1.6em;
     background-color: var(--Purplish-blue);
     color: white;
     border: 0;
@@ -161,7 +160,7 @@ input[type="radio"]{
     height: 2px;
 }
 .plan, .plan img{
-    margin: 1em 0;
+    margin: 1.6em 0;
 }
 .plan div{
     display: flex;
@@ -194,7 +193,12 @@ legend {
 .plan{
     display: flex;
 }
-
+.gr-offer {
+    display: none;
+}
+#name:focus-visible{
+    border: 2px solid var(--Purplish-blue) !important;
+}
 
 .addOn{
     display: flex;
@@ -204,7 +208,7 @@ legend {
 }
 label.addOn{
     display: flex;
-    margin: 1em 0;
+    margin: 1.6em 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -214,7 +218,7 @@ input[type="checkbox"]{
 #totalCost{
     background-color: var(--Light-gray);
     border-radius: 10px;
-    padding: 1em;
+    padding: 1.6em;
 }
 #totalCost p{
     margin: 0;
@@ -310,7 +314,7 @@ input[type="checkbox"]{
     position: relative;
 }
 .card1 input:not(input[value="Next Step"]){
-    width: calc(100% - 1em);
+    width: calc(100% - 1.6em);
 }
 .card1 input[value="Next Step"]{
     position: absolute;
@@ -323,7 +327,7 @@ input[type="checkbox"]{
 
 .btn-position{
     position: absolute;
-    bottom: 1em;
+    bottom: 1.6em;
     width: 100%;
 }
 .btn-nav {
@@ -344,7 +348,7 @@ input[type="checkbox"]{
     display: inline-block;
     width: 54px;
     height: 24px;
-    margin: 0.5em 1em;
+    margin: 0.5em 1.6em;
 }
 
 /* Hide default HTML checkbox */
@@ -370,11 +374,10 @@ input[type="checkbox"]{
 .slider:before {
     position: absolute;
     content: "";
-    height: 1.25em;
-    width: 1.25em;
+    height: 1.75em;
+    width: 1.75em;
     left: 4px;
-    bottom: 4px;
-    top: 2px;
+    top: 3px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -403,7 +406,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-@media (min-width: 726px) {
+@media screen and (min-width: 52em) {
     main{
         display: flex;
         align-items: center;
@@ -418,7 +421,7 @@ input:checked+.slider:before {
         justify-items: center;
         align-items: center;
         background-color: white;
-        padding: 1em;
+        padding: 1.6em;
         border-radius: 10px;
     }
     .sidebar{
@@ -436,8 +439,12 @@ input:checked+.slider:before {
     .card5 {
         background-color: white;
     }
-    .card{
+    .card:not(:last-child){
         top:0;
+        min-width: 100%;
+    }
+    .card:last-child {
+        top: 0;
     }
     .card-bg{
         box-shadow: none;
@@ -446,6 +453,11 @@ input:checked+.slider:before {
         display: block;
         margin: 0;
         color: white;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+    .sidebar .step{
+        color: var(--Light-gray);
     }
     .sidebar div{
         display: flex;
@@ -470,10 +482,10 @@ input:checked+.slider:before {
         flex-direction: column;
         border-radius: 5px;
         border: 2px solid var(--Light-gray);
-        padding: 1em;
+        padding: 1.6em;
     }
     .plan div, .plan img{
-        margin: 1em 0;
+        margin: 1.6em 0;
     }
     .plan img{
         width: 40px;
