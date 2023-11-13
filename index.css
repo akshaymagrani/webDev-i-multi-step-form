@@ -70,7 +70,7 @@ section{
 }
 .card{
     padding: 1.6em; 
-    max-width: calc(100vw - 6em);
+    width: clamp(200px, calc(100vw - 6em), 362px);
     position: relative;
     top: -4em;
     margin: 0 auto;
@@ -79,7 +79,7 @@ section{
     padding: 1.6em;
 }
 .pd-2{
-    padding: 0.5em;
+    padding: 1em;
 }
 .w-100{
     width: 100%;
@@ -168,8 +168,13 @@ input[type="radio"]{
     flex-direction: column;
     justify-content: center;
 }
-h2, .plan div p, .addOn p{
-    margin: 0 0 0 0.5em;
+.plan h2, .plan div p {
+    margin: 0 0 0 1em;
+}
+.addOn h2,
+.plan div p,
+.addOn p {
+    margin: 0 0 0 2em;
 }
 .radio-no-border {
     border: 2px solid transparent;
@@ -187,7 +192,7 @@ h2, .plan div p, .addOn p{
 legend {
     font-size: small;
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0;
 }
 /* ==== Plan ==== */
 .plan{
@@ -211,6 +216,7 @@ label.addOn{
     margin: 1.6em 0;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
 }
 input[type="checkbox"]{
     width: 20px;
@@ -230,7 +236,7 @@ input[type="checkbox"]{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5em 0
+    margin: 1em 0
 }
 
 /* ==== Footer ==== */
@@ -269,13 +275,13 @@ input[type="checkbox"]{
 .checkmark {
     position: absolute;
     top: 0;
-    left: 0;
     height: 25px;
     width: 25px;
     background-color: white;
     border: 1px solid var(--Light-gray);
     border-radius: 5px;
     margin: 0.5em 0;
+    transform: translate(0, 50%);
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -314,7 +320,7 @@ input[type="checkbox"]{
     position: relative;
 }
 .card1 input:not(input[value="Next Step"]){
-    width: calc(100% - 1.6em);
+    width: calc(100% - 2.2em);
 }
 .card1 input[value="Next Step"]{
     position: absolute;
