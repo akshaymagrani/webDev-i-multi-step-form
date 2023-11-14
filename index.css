@@ -238,6 +238,7 @@ input[type="checkbox"]{
     align-items: center;
     margin: 1em 0
 }
+.checkmark:active
 
 /* ==== Footer ==== */
 .attribution {
@@ -422,7 +423,7 @@ input:checked+.slider:before {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 0.75fr 2fr;
-        width: 75vw;
+        width: 65vw;
         justify-content: center;
         justify-items: center;
         align-items: center;
