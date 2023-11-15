@@ -421,7 +421,6 @@ input:checked+.slider:before {
     }
     .gr{
         display: grid;
-        grid-template-rows: 1fr;
         grid-template-columns: 0.75fr 2fr;
         width: 65vw;
         justify-content: center;
