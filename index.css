@@ -475,9 +475,9 @@ input:checked+.slider:before {
         justify-content: center;
     }
     .gr-plan{
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        gap: 1em;
     }
     .gr-offer{
         display: block;
