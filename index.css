@@ -450,7 +450,7 @@ input:checked+.slider:before {
         min-width: 100%;
     }
     .card:last-child {
-        top: 0;
+        transform: translateY(50%);
     }
     .card-bg{
         box-shadow: none;
