@@ -421,7 +421,6 @@ input:checked+.slider:before {
     }
     .gr{
         display: grid;
-        grid-template-rows: 1fr;
         grid-template-columns: 0.75fr 2fr;
         width: 65vw;
         justify-content: center;
@@ -451,7 +450,7 @@ input:checked+.slider:before {
         min-width: 100%;
     }
     .card:last-child {
-        top: 0;
+        transform: translateY(50%);
     }
     .card-bg{
         box-shadow: none;
@@ -476,9 +475,9 @@ input:checked+.slider:before {
         justify-content: center;
     }
     .gr-plan{
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        gap: 1em;
     }
     .gr-offer{
         display: block;
