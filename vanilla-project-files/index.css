@@ -1,37 +1,3 @@
-:root{
-    /* ### Primary */
-
---Marine-blue: hsl(213, 96%, 18%);
---Purplish-blue: hsl(243, 100%, 62%);
---Pastel-blue: hsl(228, 100%, 84%);
---Light-blue: hsl(206, 94%, 87%);
---Strawberry-red: hsl(354, 84%, 57%);
-
-    /* ### Neutral */
-
---Cool-gray: hsl(231, 11%, 63%);
---Light-gray: hsl(229, 24%, 87%);
---Magnolia: hsl(217, 100%, 97%);
---Alabaster: hsl(231, 100%, 99%);
---White: hsl(0, 0%, 100%);
-
-    /* ### Image address */
---mobile-Image-Add: url("./assets/images/bg-sidebar-mobile.svg");
---desktop-Image-Add: url("./assets/images/bg-sidebar-desktop.svg");
-
-}
-@font-face {
-    font-family: Ubuntu-B;
-    src: url("./assets/fonts/Ubuntu-Bold.ttf");
-}
-@font-face {
-    font-family: Ubuntu-M;
-    src: url("./assets/fonts/Ubuntu-Medium.ttf");
-}
-@font-face {
-    font-family: Ubuntu-R;
-    src: url("./assets/fonts/Ubuntu-Regular.ttf");
-}
 body{
     padding: 0;
     margin: 0;
