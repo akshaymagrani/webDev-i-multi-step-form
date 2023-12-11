@@ -1,4 +1,5 @@
-function AddOns() {
+function AddOns(props) {
+    console.log(props);
     return (
         <section className=" card3">
             <div className="card-bg card pd-3">

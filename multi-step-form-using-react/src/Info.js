@@ -1,4 +1,5 @@
-function Info() {
+function Info(props) {
+    console.log(props);
     return (
         <section className="personalInfo card1">
             <div className="card card-bg pd-3">
@@ -16,7 +17,7 @@ function Info() {
                 <br /><br />
             </div>
             <div className="btn-position">
-                <input type="button" className="pd-2" id="next1" name="Next-1" value="Next Step"/>
+                <input type="button" className="pd-2" id="next1" name="Next-1" value="Next Step" onClick={props.makeVisible('Plans')}/>
             </div>
         </section>
     )
