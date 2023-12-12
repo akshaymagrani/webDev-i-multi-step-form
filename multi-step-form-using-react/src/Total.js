@@ -1,4 +1,4 @@
-function Total() {
+function Total(props) {
     return (
         <section className="card4">
             <div className="card-bg pd-3 card">
@@ -30,8 +30,8 @@ function Total() {
                 </div>
             </div>
             <div className="btn-position">
-                <input type="button" className="pd-2" name="Back-3" id="back4" value="Go Back" />
-                <input type="button" className="pd-2" name="Confirm" id="next4" value="Confirm" />
+                <input type="button" className="pd-2" name="Back-3" id="back4" value="Go Back" onClick={() => props.makeVisible(props.componentNameBack)}/>
+                <input type="button" className="pd-2" name="Confirm" id="next4" value="Confirm" onClick={() => props.makeVisible(props.componentNameNext)}/>
             </div>
         </section>
     )

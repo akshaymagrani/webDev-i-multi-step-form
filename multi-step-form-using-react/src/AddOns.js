@@ -44,8 +44,8 @@ function AddOns(props) {
             </div>
 
             <div className="btn-position">
-                <input type="button" className="pd-2" name="Back-3" id="back3" value="Go Back" />
-                <input type="button" className="pd-2" name="Next-3" id="next3" value="Next Step" />
+                <input type="button" className="pd-2" name="Back-3" id="back3" value="Go Back" onClick={() => props.makeVisible(props.componentNameBack)}/>
+                <input type="button" className="pd-2" name="Next-3" id="next3" value="Next Step" onClick={() => props.makeVisible(props.componentNameNext)}/>
             </div>
         </section>
     )

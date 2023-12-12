@@ -1,4 +1,4 @@
-function Plans() {
+function Plans(props) {
     return (
         <section className="card2" id="plan">
             <div className="card-bg  pd-3 card">
@@ -44,8 +44,8 @@ function Plans() {
                 </div>
             </div>
             <div className="btn-position">
-                <input type="button" className="pd-2" name="Back-3" id="back2" value="Go Back" />
-                <input type="button" className="pd-2" name="Next-2" id="next2" value="Next Step" />
+                <input type="button" className="pd-2" name="Back-3" id="back2" value="Go Back" onClick={() => props.makeVisible(props.componentNameBack)}/>
+                <input type="button" className="pd-2" name="Next-2" id="next2" value="Next Step" onClick={() => props.makeVisible(props.componentNameNext)}/>
             </div>
         </section>
     )

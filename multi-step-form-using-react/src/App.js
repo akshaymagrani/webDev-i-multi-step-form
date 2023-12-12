@@ -7,10 +7,6 @@ import Total from './Total';
 import ThankYou from './ThankYou';
 
 function App() {
-/*  button 1 click - first section visible and so on
-    
-*/
-
   const [isVisible, setVisibility] = React.useState(null);
 
   function toggleVisibility(componentName) {
@@ -53,13 +49,41 @@ function App() {
             </div>
           </div>
         </div>
-    {/* Sidebar end */}
-      {isVisible === 'Info' && <Info isVisible = {isVisible} makeVisible = {toggleVisibility} />}
-      {isVisible === 'Plans' && <Plans isVisible = {isVisible}/>}
-      {isVisible === 'AddOns' && <AddOns isVisible = {isVisible}/>}
-      {isVisible === 'Total' && <Total isVisible = {isVisible}/>}
+    {/* Sidebar end */} 
 
-      {isVisible && <ThankYou isVisible = {isVisible}/>}
+      {isVisible === 'Info' && 
+        <Info 
+          isVisible = {isVisible} 
+          makeVisible = {toggleVisibility} 
+          componentNameNext = {'Plans'}
+        />}
+      {isVisible === 'Plans' && 
+        <Plans 
+          isVisible = {isVisible} 
+          makeVisible = {toggleVisibility} 
+          componentNameBack = {'Info'}
+          componentNameNext = {'AddOns'}
+        />}
+      {isVisible === 'AddOns' && 
+        <AddOns 
+          isVisible = {isVisible} 
+          makeVisible = {toggleVisibility} 
+          componentNameBack = {'Plans'}
+          componentNameNext = {'Total'}
+        />}
+      {isVisible === 'Total' && 
+        <Total 
+          isVisible = {isVisible} 
+          makeVisible = {toggleVisibility} 
+          componentNameBack = {'AddOns'}
+          componentNameNext = {'ThankYou'}
+        />}
+
+      {isVisible === 'ThankYou' && 
+      <ThankYou 
+        isVisible = {isVisible}
+        makeVisible = {toggleVisibility}
+      />}
 
     </section>
   </main>

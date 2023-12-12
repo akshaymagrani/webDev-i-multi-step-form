@@ -17,7 +17,7 @@ function Info(props) {
                 <br /><br />
             </div>
             <div className="btn-position">
-                <input type="button" className="pd-2" id="next1" name="Next-1" value="Next Step" onClick={props.makeVisible('Plans')}/>
+                <input type="button" className="pd-2" id="next1" name="Next-1" value="Next Step" onClick={() => props.makeVisible(props.componentNameNext)}/>
             </div>
         </section>
     )
