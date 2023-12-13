@@ -98,7 +98,6 @@ section {
 }
 
 .card {
-  padding: 1.6em;
   width: clamp(200px, calc(100vw - 6em), 362px);
   position: relative;
   top: -4em;
@@ -387,10 +386,6 @@ input[type="checkbox"] {
   background-color: var(--Magnolia);
   height: calc(100vh - 200px);
   position: relative;
-}
-
-.card1 input:not(input[value="Next Step"]) {
-  width: calc(100% - 2.2em);
 }
 
 .card1 input[value="Next Step"] {

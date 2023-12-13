@@ -1,7 +1,7 @@
 function Total(props) {
     return (
         <section className="card4">
-            <div className="card-bg pd-3 card">
+            <div className="card-bg py-7 px-4 card">
                 <h1>Finishing up</h1>
                 <p className="p-color">Double-check everything looks OK before confirming.</p>
 

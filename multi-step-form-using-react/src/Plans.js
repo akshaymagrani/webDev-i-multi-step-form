@@ -1,13 +1,17 @@
+import arcade from './assets/images/icon-arcade.svg';
+import advance from './assets/images/icon-advanced.svg';
+import pro from './assets/images/icon-pro.svg';
+
 function Plans(props) {
     return (
         <section className="card2" id="plan">
-            <div className="card-bg  pd-3 card">
+            <div className="card-bg py-7 px-4 card">
                 <h1>Select your plan</h1>
                 <p className="p-color">You have the option of monthly or yearly billing.</p>
                 <div className="gr-plan">
                 <label className="plan" htmlFor="plan-1">
                     <input type="radio" name="Plan" id="plan-1" />
-                    <img src="./assets/images/icon-arcade.svg" alt="arcade-icon" />
+                    <img src={arcade} alt="arcade-icon" />
                     <div>
                     <h2>Arcade</h2>
                     <p className="p-color">$<span className="monthlyCost">9</span>/<span className="m-y">mo</span></p>
@@ -16,7 +20,7 @@ function Plans(props) {
                 </label>
                 <label className="plan" htmlFor="plan-2">
                     <input type="radio" name="Plan" id="plan-2" />
-                    <img src="./assets/images/icon-advanced.svg" alt="advance-icon"/>
+                    <img src={advance} alt="advance-icon"/>
                     <div>
                     <h2>Advanced</h2>
                     <p className="p-color">$<span className="monthlyCost">12</span>/<span className="m-y">mo</span></p>
@@ -25,7 +29,7 @@ function Plans(props) {
                 </label>
                 <label className="plan" htmlFor="plan-3">
                     <input type="radio" name="Plan" id="plan-3" />
-                    <img src="./assets/images/icon-pro.svg" alt="pro-icon"/>
+                    <img src={pro} alt="pro-icon"/>
                     <div>
                     <h2>Pro</h2>
                     <p className="p-color">$<span className="monthlyCost">15</span>/<span className="m-y">mo</span></p>

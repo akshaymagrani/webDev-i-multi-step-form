@@ -2,7 +2,7 @@ function AddOns(props) {
     console.log(props);
     return (
         <section className=" card3">
-            <div className="card-bg card pd-3">
+            <div className="card-bg card py-7 px-4">
                 <h1>Pick add-ons</h1>
                 <p>Add-ons help enhance your gaming experience.</p>
 

@@ -1,7 +1,7 @@
 function ThankYou() {
     return (
         <section className="t-auto card5">
-            <div className="card-bg pd-3 card">
+            <div className="card-bg py-7 px-4 card">
                 <img src="./assets/images/icon-thank-you.svg" alt="icon-thank-you" />
                 <h1>Thank you!</h1>
 
