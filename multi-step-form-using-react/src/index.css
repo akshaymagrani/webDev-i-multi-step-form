@@ -20,24 +20,24 @@
   --White: hsl(0, 0%, 100%);
 
   /* ### Image address */
-  --mobile-Image-Add: url("../../assets/images/bg-sidebar-mobile.svg");
-  --desktop-Image-Add: url("../../assets/images/bg-sidebar-desktop.svg");
+  --mobile-Image-Add: url("./assets/images/bg-sidebar-mobile.svg");
+  --desktop-Image-Add: url("./assets/images/bg-sidebar-desktop.svg");
 
 }
 
 @font-face {
   font-family: Ubuntu-B;
-  src: url("../../assets/fonts/Ubuntu-Bold.ttf");
+  src: url("./assets/fonts/Ubuntu-Bold.ttf");
 }
 
 @font-face {
   font-family: Ubuntu-M;
-  src: url("../../assets/fonts/Ubuntu-Medium.ttf");
+  src: url("./assets/fonts/Ubuntu-Medium.ttf");
 }
 
 @font-face {
   font-family: Ubuntu-R;
-  src: url("../../assets/fonts/Ubuntu-Regular.ttf");
+  src: url("./assets/fonts/Ubuntu-Regular.ttf");
 }
 
 body {

@@ -7,12 +7,37 @@ import Total from './Total';
 import ThankYou from './ThankYou';
 
 function App() {
-  const [isVisible, setVisibility] = React.useState(null);
+  const [isVisible, setVisibility] = React.useState('Info');
 
   function toggleVisibility(componentName) {
     setVisibility((prevState) => 
       prevState === componentName ? null : componentName
     );
+  }
+
+  // State to handle React form data
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phoneNo: "",
+    plan: "",
+    addOns: "",
+    total: ""
+  })
+
+  function handleChange(event) {
+      const {name, value} = event.target;
+      setFormData(prevData => ({
+          ...prevData,
+          [name]: value
+      }))
+      console.log(formData);
+  }
+
+  function onSubmit(event){
+      event.preventDefault();
+      console.log("submitted!");
+      console.log(formData);
   }
 
   return (
@@ -56,6 +81,8 @@ function App() {
           isVisible = {isVisible} 
           makeVisible = {toggleVisibility} 
           componentNameNext = {'Plans'}
+          formData = {formData}
+          handleChange = {handleChange}
         />}
       {isVisible === 'Plans' && 
         <Plans 
@@ -63,6 +90,8 @@ function App() {
           makeVisible = {toggleVisibility} 
           componentNameBack = {'Info'}
           componentNameNext = {'AddOns'}
+          formData = {formData}
+          handleChange = {handleChange}
         />}
       {isVisible === 'AddOns' && 
         <AddOns 
@@ -70,6 +99,8 @@ function App() {
           makeVisible = {toggleVisibility} 
           componentNameBack = {'Plans'}
           componentNameNext = {'Total'}
+          formData = {formData}
+          handleChange = {handleChange}
         />}
       {isVisible === 'Total' && 
         <Total 
@@ -77,6 +108,9 @@ function App() {
           makeVisible = {toggleVisibility} 
           componentNameBack = {'AddOns'}
           componentNameNext = {'ThankYou'}
+          formData = {formData}
+          handleChange = {handleChange}
+          onSubmit = {onSubmit}
         />}
 
       {isVisible === 'ThankYou' && 
