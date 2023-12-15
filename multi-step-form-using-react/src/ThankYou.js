@@ -1,8 +1,9 @@
+import thankYou from './assets/images/icon-thank-you.svg'
 function ThankYou() {
     return (
         <section className="t-auto card5">
             <div className="card-bg py-7 px-4 card">
-                <img src="./assets/images/icon-thank-you.svg" alt="icon-thank-you" />
+                <img src={thankYou} alt="icon-thank-you" className="" />
                 <h1>Thank you!</h1>
 
                 <p className="p-color">Thanks for confirming your subscription! We hope you have fun 

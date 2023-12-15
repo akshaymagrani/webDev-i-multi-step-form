@@ -20,16 +20,36 @@ function App() {
     name: "",
     email: "",
     phoneNo: "",
-    plan: "",
+    plan: "Arcade",
     addOns: "",
-    total: ""
+    total: "",
+    onlineService: false,
+    extraSpace: false,
+    theme: false,
+    monthly_OR_yearly: false,
+    monthlyRates: {
+      arcade: 9,
+      advanced: 12,
+      pro: 15,
+      onlineService: 1,
+      extraSpace: 2,
+      theme: 2
+    },
+    yearlyRates: {
+      arcade: 90,
+      advanced: 120,
+      pro: 150,
+      onlineService: 10,
+      extraSpace: 20,
+      theme: 20
+    }
   })
 
   function handleChange(event) {
-      const {name, value} = event.target;
+      const {name, type, value, checked} = event.target;
       setFormData(prevData => ({
           ...prevData,
-          [name]: value
+          [name]: type === 'checkbox'? checked: value
       }))
       console.log(formData);
   }

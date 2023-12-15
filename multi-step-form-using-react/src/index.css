@@ -217,17 +217,6 @@ input[type="radio"] {
   justify-content: center;
 }
 
-.plan h2,
-.plan div p {
-  margin: 0 0 0 1em;
-}
-
-.addOn h2,
-.plan div p,
-.addOn p {
-  margin: 0 0 0 2em;
-}
-
 .radio-no-border {
   border: 2px solid transparent;
 }
