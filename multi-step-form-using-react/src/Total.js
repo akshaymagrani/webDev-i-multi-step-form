@@ -1,6 +1,68 @@
 function Total(props) {
     let mORy = 'mo';
-    mORy = props.formData.monthly_OR_yearly === false ? 'mo' : 'yr'
+    mORy = props.formData.monthly_OR_yearly === false ? 'mo' : 'yr';
+    let total = 0;
+    if (mORy === 'mo') {
+        if (props.formData.plan === 'Arcade') {
+            total += props.formData.monthlyRates.arcade;
+        }
+
+        if (props.formData.plan === 'Advanced') {
+            total += props.formData.monthlyRates.advanced;
+        }
+        
+        if (props.formData.plan === 'Pro') {
+            total += props.formData.monthlyRates.pro;
+        }
+
+        if (props.formData.onlineService) {
+            total += props.formData.monthlyRates.onlineService;
+        }
+
+        if (props.formData.extraSpace) {
+            total += props.formData.monthlyRates.extraSpace;
+        }
+
+        if (props.formData.theme) {
+            total += props.formData.monthlyRates.theme;
+        }
+    }
+    else{
+        if (props.formData.plan === 'Arcade') {
+            total += props.formData.yearlyRates.arcade;
+        }
+
+        if (props.formData.plan === 'Advanced') {
+            total += props.formData.yearlyRates.advanced;
+        }
+        
+        if (props.formData.plan === 'Pro') {
+            total += props.formData.yearlyRates.pro;
+        }
+
+        if (props.formData.onlineService) {
+            total += props.formData.yearlyRates.onlineService; // or yearlyRate
+        }
+        if (props.formData.extraSpace) {
+            total += props.formData.yearlyRates.extraSpace; // or yearlyRate
+        };
+        if (props.formData.theme) {
+            total += props.formData.yearlyRates.theme; // or yearlyRate
+        };
+    }
+    const updateTotal = () => {
+        const updatedData = { ...props.formData, total: total };
+        props.updateFormData(updatedData);
+    };
+        /* 
+        
+        
+        by default: total = arcade's code + 0;
+        loop through each addon:
+            if add-ons1 are checked,
+                total += cost of addon
+        display the total.
+        */
     return (
         <section className="card4">
             <form className="card-bg py-7 px-4 card" name="multi-step-form">
@@ -11,13 +73,16 @@ function Total(props) {
                 <div id="totalCost">
                 <div>
                     <div>
-                    <h3>{props.formData.plan} (<span id="Mo-Ye">Monthly</span>)<span id="choice"></span></h3>
+                    <h3>{props.formData.plan} ({mORy === 'mo' ? `Monthly`: `Yearly`})<span id="choice"></span></h3>
                     <a href="#plan">Change</a>
                     </div>
                     <p>$
-                        {props.formData.plan === "Arcade" && <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.arcade}/${mORy}`: `${props.formData.yearlyRates.arcade}/${mORy}`}</span>}
-                        {props.formData.plan === "Advanced" && <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.advanced}/${mORy}`: `${props.formData.yearlyRates.advanced}/${mORy}`}</span>}
-                        {props.formData.plan === "Pro" && <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.pro}/${mORy}`: `${props.formData.yearlyRates.pro}/${mORy}`}</span>}
+                        {props.formData.plan === "Arcade" && 
+                            <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.arcade}/${mORy}`: `${props.formData.yearlyRates.arcade}/${mORy}`}</span>}
+                        {props.formData.plan === "Advanced" && 
+                            <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.advanced}/${mORy}`: `${props.formData.yearlyRates.advanced}/${mORy}`}</span>}
+                        {props.formData.plan === "Pro" && 
+                            <span className="monthlyCost">{mORy === 'mo' ? `${props.formData.monthlyRates.pro}/${mORy}`: `${props.formData.yearlyRates.pro}/${mORy}`}</span>}
                     </p>
                 </div>
                 <hr />
@@ -45,7 +110,7 @@ function Total(props) {
                 </div>
                 <div className="pd-3 d-flex justify-spacebetween">
                 <p className="p-color">Total (per<span></span>)</p>
-                <p>+$<span id="total"></span>/<span className="m-y">mo</span></p>
+                <p>${total}/{mORy}</p>
                 </div>
             </form>
             <div className="btn-position">
