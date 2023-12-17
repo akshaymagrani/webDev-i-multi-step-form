@@ -193,6 +193,7 @@ input[value="Confirm"] {
 .btn-position {
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .plan {
@@ -397,6 +398,9 @@ input[type="checkbox"] {
   background-color: var(--Marine-blue);
   color: white;
   font-weight: bold;
+}
+.btn-nav:click{
+  background-color: var(--Light-blue);
 }
 
 .bg-blue {

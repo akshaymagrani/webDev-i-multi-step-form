@@ -70,7 +70,7 @@ function Total(props) {
                 <p className="p-color">Double-check everything looks OK before confirming.</p>
 
                 {/* Dynamically add subscription and add-on selections here */}
-                <div id="totalCost">
+                <div id="totalCost" className="my-3">
                 <div>
                     <div>
                     <h3>{props.formData.plan} ({mORy === 'mo' ? `Monthly`: `Yearly`})<span id="choice"></span></h3>

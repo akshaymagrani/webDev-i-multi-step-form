@@ -8,12 +8,33 @@ import ThankYou from './ThankYou';
 
 function App() {
   const [isVisible, setVisibility] = React.useState('Info');
-
-  function toggleVisibility(componentName) {
+  const [btnBg, setBtnBg] = React.useState(
+    {
+      button1: {backgroundColor: "hsl(206, 94%, 87%)"},
+      button2: {backgroundColor: "hsl(213, 96%, 18%)"},
+      button3: {backgroundColor: "hsl(213, 96%, 18%)"},
+      button4: {backgroundColor: "hsl(213, 96%, 18%)"}
+    });
+  
+  function toggleVisibility(componentName, buttonName) {
     setVisibility((prevState) => 
       prevState === componentName ? null : componentName
     );
-  }
+    
+    setBtnBg((prevBgColor) => {
+      const updatedBgColors = {};
+      // Set the clicked button to light blue
+      updatedBgColors[buttonName] = { backgroundColor: 'hsl(206, 94%, 87%)' };
+      // Set other buttons to dark blue
+      Object.keys(prevBgColor).forEach((name) => {
+        if (name !== buttonName) {
+          updatedBgColors[name] = { backgroundColor: 'hsl(213, 96%, 18%)' };
+        }
+      });
+      return updatedBgColors;
+    });
+  console.log(btnBg);
+};
 
   // State to handle React form data
   const [formData, setFormData] = React.useState({
@@ -66,28 +87,28 @@ function App() {
       <section className="gr">
         <div className="sidebar">
           <div>
-            <button className="btn-nav" type="button" onClick={() => toggleVisibility('Info')}>1</button>
+            <button className="btn-nav active:bg-blue-100" type="button" name='button1' onClick={() => toggleVisibility('Info', 'button1')} style={btnBg.button1}>1</button>
             <div className="gr-navDiv">
               <p className="step">Step 1</p>
               <h3 className="form-title">Your info</h3>
             </div>
           </div>  
           <div>
-            <button className="btn-nav" type="button" onClick={() => toggleVisibility('Plans')}>2</button>
+            <button className="btn-nav" type="button" name='button2' onClick={() => toggleVisibility('Plans', 'button2')} style={btnBg.button2}>2</button>
             <div className="gr-navDiv">
               <p className="step">Step 2</p>
               <h3 className="form-title">Select plan</h3>
             </div>
           </div>
           <div>
-            <button className="btn-nav" type="button" onClick={() => toggleVisibility('AddOns')}>3</button>
+            <button className="btn-nav" type="button" name='button3' onClick={() => toggleVisibility('AddOns', 'button3')} style={btnBg.button3}>3</button>
             <div className="gr-navDiv">
               <p className="step">Step 3</p>
               <h3 className="form-title">Add-ons</h3>
             </div>
           </div>
           <div>
-            <button className="btn-nav" type="button" onClick={() => toggleVisibility('Total')}>4</button>
+            <button className="btn-nav" type="button" name='button4' onClick={() => toggleVisibility('Total', 'button4')} style={btnBg.button4}>4</button>
             <div className="gr-navDiv">
               <p className="step">Step 4</p>
               <h3 className="form-title">Summary</h3>
